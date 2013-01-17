@@ -17,7 +17,7 @@ public class FruitShop {
         }
     }
 
-    public FruitBasket getFruit() {
+    protected FruitBasket getFruit() {
         return fruitBasket;
     }
 }

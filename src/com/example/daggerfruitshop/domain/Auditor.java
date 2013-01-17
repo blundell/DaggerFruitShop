@@ -1,12 +1,9 @@
 package com.example.daggerfruitshop.domain;
 
-import javax.inject.Inject;
-
 public class Auditor {
 
     private final FruitShop shop;
 
-    @Inject
     public Auditor(FruitShop shop) {
         this.shop = shop;
     }

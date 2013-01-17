@@ -14,7 +14,11 @@ public class FruitShopApplication extends Application {
         super.onCreate();
         Log.d("Sanity", "on create of dagger fruit shop app");
 
-        dagger = ObjectGraph.create(new MainActivityModule());
+        dagger = ObjectGraph.create(addModules());
+    }
+
+    private Object[] addModules() {
+        return new Object[] {new MainActivityModule()};
     }
 
     public ObjectGraph getInjectionFramework() {

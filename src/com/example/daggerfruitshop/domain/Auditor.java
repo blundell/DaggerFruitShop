@@ -1,14 +1,14 @@
 package com.example.daggerfruitshop.domain;
 
+import javax.inject.Inject;
+
 public class Auditor {
 
-    private final FruitShop shop;
-
-    public Auditor(FruitShop shop) {
-        this.shop = shop;
+    @Inject
+    public Auditor() {
     }
 
-    public int count() {
+    public int count(FruitShop shop) {
         FruitBasket basket = shop.getFruit();
 
         int i = 0;

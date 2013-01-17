@@ -17,6 +17,9 @@ public class MainActivity extends Activity {
     @Inject
     private FruitShop fruitShop;
 
+    @Inject
+    private Auditor auditor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +30,7 @@ public class MainActivity extends Activity {
 
         TextView numberOfFruitTextView = (TextView) findViewById(R.id.main_tv_fruit_count);
 
-        numberOfFruitTextView.setText("Shop Fruit Count: " + new Auditor(fruitShop).count());
+        numberOfFruitTextView.setText("Shop Fruit Count: " + auditor.count(fruitShop));
     }
 
     private void inject() {
